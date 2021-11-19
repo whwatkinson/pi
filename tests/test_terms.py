@@ -1,4 +1,3 @@
-
 from pytest import mark
 
 from terms import Term
@@ -34,6 +33,5 @@ class TestTerm:
         test = Term(coefficient, power)
 
         test.differentiate()
-        # breakpoint()
         assert str(test) == expected_str
         assert test.value(1) == expected_value
