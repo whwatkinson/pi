@@ -14,5 +14,7 @@ class TestPascal:
 
         assert test.row == expected_result
 
+        assert len(test.row) == line_number + 1
+
         if line_number > 0:
             assert test.row[1] == line_number
