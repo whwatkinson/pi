@@ -2,7 +2,6 @@ from math import factorial
 
 
 class Pascal:
-
     def __init__(self, row_number):
         self.row_number = row_number
         self.row = self.pascals_triangle(row_number)

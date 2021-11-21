@@ -3,7 +3,6 @@ from typing import Union
 
 
 class Term:
-
     def __init__(self, coefficient: int, power: int = 0):
         self.coefficient = Fraction(coefficient)
         self.power = Fraction(power)
@@ -17,7 +16,9 @@ class Term:
 
     def differentiate(self):
 
+        # bring down the power
         self.coefficient *= self.power
+        # Decrease the  power by one
         self.power -= 1
 
         if self.power == 0:
@@ -25,7 +26,9 @@ class Term:
 
     def integrate(self):
 
+        # Increase the power by one
         self.power += 1
+        # Divide by the new power
         self.coefficient /= self.power
 
         if self.power == 0:
