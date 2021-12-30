@@ -14,3 +14,6 @@ class Pascal:
     @classmethod
     def pascals_triangle(cls, rows: int) -> List[int]:
         return [cls.combination(rows, r) for r in range(rows + 1)]
+
+    def __repr__(self):
+        return f"Pascals triangle row: {self.row_number}"

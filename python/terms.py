@@ -2,6 +2,18 @@ from fractions import Fraction
 from typing import Union
 
 
+
+
+
+
+
+"""https://docs.python.org/3/library/decimal.html"""
+"""https://pythonhosted.org/bigfloat/"""
+
+
+
+
+
 class Term:
     def __init__(self, coefficient: int, power: int = 0):
         self.coefficient = Fraction(coefficient)
