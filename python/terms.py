@@ -1,17 +1,9 @@
-from fractions import Fraction
 from typing import Union
 
-
-
-
-
-
+from python.fractions import Fraction
 
 """https://docs.python.org/3/library/decimal.html"""
 """https://pythonhosted.org/bigfloat/"""
-
-
-
 
 
 class Term:
@@ -24,7 +16,7 @@ class Term:
         return f"{self.coefficient}x^{self.power}"
 
     def value(self, x: Union[int, float] = 1) -> Fraction:
-        return self.coefficient * (x ** self.power)
+        return self.coefficient * (x**self.power)
 
     def differentiate(self):
 
