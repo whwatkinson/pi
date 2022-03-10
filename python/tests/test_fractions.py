@@ -14,7 +14,11 @@ def does_not_raise():
 class TestFraction:
     @mark.parametrize(
         "test_numerator, test_denominator, expected_value, exception",
-        [(1, 2, 0.5, does_not_raise()), (1.1, 2, 0.5, raises(IncorrectValue))],
+        [
+            (1, 2, 0.5, does_not_raise()),
+            (1.1, 2, None, raises(IncorrectValue)),
+            (1, 3, 0.33333, does_not_raise()),
+        ],
     )
     def test_fraction(
         self,
